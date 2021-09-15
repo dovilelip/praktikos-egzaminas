@@ -1,0 +1,282 @@
+body {
+  background: white;
+  font-family: montserrat;
+  font-size: 15px;
+}
+
+.nav-item:hover {
+  border-bottom: 3px solid red;
+}
+
+
+
+div {
+  .download-register {
+    background-image: url(https://public-v2links.adobecc.com/71297cf3-7ddc-40af-70c4-ce8fda78a719/component?params=component_id%3A1d0e71a5-c99e-4efd-b540-f75e6b91aa1b&params=version%3A0&token=1631544985_da39a3ee_dae1dd81f8d109dcbb966e6f6f550fe3f0bfaed2&api_key=CometServer1);
+    height: 100vh;
+    background-size: cover;
+
+    .container {
+      height: inherit;
+
+      .content {
+        display: flex;
+        flex-direction: row;
+        height: inherit;
+        align-items: center;
+
+        .download {
+          display: flex;
+          flex-direction: column;
+          width: auto;
+          color: white;
+          margin-right: 40px;
+
+          .download-button {
+            border: 2px solid white;
+            background: none;
+            color: white;
+            font-size: 15px;
+            font-weight: bold;
+            padding: 10px;
+          }
+
+          .download-button:hover {
+            background-color: #ddd;
+            color: black;
+          }
+
+        }
+
+        .register {
+          background-color: white;
+          width: 60%;
+          border-radius: 10px;
+          padding: 4px;
+
+          .register-container {
+            text-align: center;
+            font-weight: 900;
+            background-color: yellow;
+            padding: 10px;
+            width: 100%;
+            height: 100%;
+          }
+
+          span {
+            color: #E27866;
+          }
+
+          .container-form {
+            font-weight: bold;
+            padding: 10px;
+          }
+
+          .form-group {
+            font-size: 10px;
+          }
+
+          .container-list {
+            padding: 10px;
+            text-align: left;
+            margin: 0;
+          }
+
+          input {
+            border: none;
+            border-bottom: 2px solid #D8D8D8;
+          }
+
+          #fname {
+          color: black;
+          //font-size: 15px;
+          }
+
+          .radio-container {
+            padding: 10px;
+          }
+
+          .radio-list {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            padding: 10px 0;
+            font-size: 10px;
+          }
+
+          .custom-radio {
+            display: flex;
+            align-items: center;
+            width: 100px;
+          }
+
+          input[type="radio"] {
+            visibility: hidden;
+          }
+
+          label {
+            opacity: 0.6;
+          }
+
+          input[type="radio"]:checked + label {
+            opacity: 1;
+          }
+
+          .radio {
+            display: inline-block;
+            position: relative;
+            width: 12px;
+            height: 12px;
+            border: 2px solid #41D395;
+            border-radius: 50%;
+          }
+
+          .radio:before {
+            position: absolute;
+            content: "";
+            top: 1.5px;
+            left: 1.5px;
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            transform: scale(0);
+            transition: 0.3s;
+          }
+
+          input[type="radio"]:checked + label .radio:before {
+            background: #41D395;
+            align-items: center;
+            transform: scale(1);
+          }
+
+          .radio-monthly {
+            color: black;
+          }
+
+          .started-container {
+            display: flex;
+          }
+
+          .block {
+            display: block;
+            width: 100%;
+            border: none;
+            background-color: #04AA6D;
+            color: white;
+            font-weight: bold;
+            padding: 14px 28px;
+            font-size: 16px;
+            cursor: pointer;
+            text-align: center;
+          }
+
+          .block:hover {
+            background-color: #ddd;
+            color: black;
+          }
+        }
+      }
+    }
+    .gray {
+      background-color: rgba(0, 0, 0, 0.3);
+      height: inherit;
+    }
+  }
+}
+
+div {
+  .social-media {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+
+    .media {
+      margin-top: 20px;
+    }
+
+    .social {
+      display: flex;
+      flex-direction: row;
+    }
+
+      .icon {
+      margin: 0 20px;
+      }
+  }
+}
+
+div {
+  .transitioning-effect {
+    background-image: url(https://public-v2links.adobecc.com/71297cf3-7ddc-40af-70c4-ce8fda78a719/component?params=component_id%3A9acae50d-75e5-431e-bfc6-ff7738e64b76&params=version%3A0&token=1631696459_da39a3ee_afa0d547c394b2cec874a26c3f2cde35c56e819c&api_key=CometServer1);
+    height: 100vh;
+    background-size: cover;
+  }
+}
+
+
+div {
+  .company {
+    background-color: black;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    color: white;
+  }
+
+  .company-logo {
+  }
+
+  .company-croak {
+    border-bottom: 2px solid #E27866;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 30vh;
+  }
+
+  .company-block {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+  }
+
+  .dots1, .dots2 {
+    width: 50px;
+    height: 50px;
+    background: #E27866;
+    border-radius: 100px;
+  }
+}
+
+div {
+  .awesome {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    height: 100vh;
+  }
+
+  .awesome-textf {
+    font-size: 40px;
+    font-weight: bold;
+    color: black;
+  }
+
+  .awesome-croak {
+    border-bottom: 2px solid #E27866;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 20vh;
+    align-items: center;
+  }
+
+    .awesome-texts {
+      font-size: 20px;
+      color: #86878B;
+    }
+  }
+}
