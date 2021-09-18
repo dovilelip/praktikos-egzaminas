@@ -1,6 +1,8 @@
+$assetPath: "../img";
+
 body {
   background: white;
-  font-family: montserrat;
+  font-family: Montserrat, serif;
   font-size: 15px;
 }
 
@@ -8,12 +10,41 @@ body {
   border-bottom: 3px solid red;
 }
 
+div {
+  .download-register, .tabs, .county, .options, .pricing, .reviews, .contact {
+    height: 620px;
+    opacity: 1;
+  }
 
+  //background-colors
+  .tabs {
+    background: transparent linear-gradient(270deg, #6696E2 0%, #E27866 100%) 0 0 no-repeat padding-box;
+  }
+
+  .county {
+    background: #1C1C1C 0 0 no-repeat padding-box;
+  }
+
+  .pricing {
+    background: #6696E2 0 0 no-repeat padding-box;
+  }
+
+  .social, .options, .reviews {
+    background: #FFFFFF 0 0 no-repeat padding-box;
+  }
+
+  .contact {
+    background: #E27866 0 0 no-repeat padding-box;
+  }
+
+  .footer {
+    background: #1C1C1C 0 0 no-repeat padding-box;
+  }
+}
 
 div {
   .download-register {
-    background-image: url(https://public-v2links.adobecc.com/71297cf3-7ddc-40af-70c4-ce8fda78a719/component?params=component_id%3A1d0e71a5-c99e-4efd-b540-f75e6b91aa1b&params=version%3A0&token=1631544985_da39a3ee_dae1dd81f8d109dcbb966e6f6f550fe3f0bfaed2&api_key=CometServer1);
-    height: 100vh;
+    background-image: url(#{$assetPath}/city.png);
     background-size: cover;
 
     .container {
@@ -88,8 +119,8 @@ div {
           }
 
           #fname {
-          color: black;
-          //font-size: 15px;
+            color: black;
+            //font-size: 15px;
           }
 
           .radio-container {
@@ -177,106 +208,244 @@ div {
         }
       }
     }
+
     .gray {
       background-color: rgba(0, 0, 0, 0.3);
       height: inherit;
     }
   }
+
+  .social {
+    height: 105px;
+
+    .left {
+      width: 40%;
+
+      .title {
+        font: normal normal 600 20px/24px Montserrat;
+        letter-spacing: 0;
+        color: #333333;
+      }
+
+      .text {
+        text-align: left;
+        font: normal normal normal 14px/20px Montserrat;
+        letter-spacing: 0;
+        color: #86878B;
+      }
+    }
+
+    .right {
+      width: 60%;
+      align-items: center;
+
+      .social-icon {
+        background: transparent 0 0 no-repeat padding-box;
+        opacity: 0.65;
+      }
+    }
+  }
+
+  .tabs {
+    background-image: url(#{$assetPath}/mountains.png);
+    background-size: cover;
+
+    .left {
+      width: 20%;
+
+      .cube {
+        width: 100px;
+        height: 100px;
+        background-color: #e29b8e;
+
+        &.selected {
+          box-shadow: 0 3px 6px #00000029;
+          background-color: #E27866;
+        }
+      }
+    }
+
+    .center {
+      width: 40%;
+      margin: 20px 20px;
+
+      .title {
+        text-align: left;
+        font: normal normal 600 36px/40px Montserrat;
+        letter-spacing: 0px;
+        color: #FFFFFF;
+      }
+
+      .text {
+        text-align: left;
+        font: normal normal normal 14px/20px Montserrat;
+        letter-spacing: 0px;
+        color: #FFFFFF;
+      }
+    }
+
+    .right {
+      width: 40%;
+    }
+  }
+
+  .contact {
+    color: #FFFFFF;
+
+    .container {
+      align-items: center;
+      height: inherit;
+
+      h1 {
+        margin-bottom: 50px;
+      }
+
+      .contact-form {
+        display: inline-block;
+        border-radius: 7px;
+        border: 1px solid #FFFFFF;
+        background-color: #FFFFFF;
+        width: 45%;
+        padding: 30px;
+
+        .formD {
+          display: flex;
+          flex-direction: column;
+        }
+
+        input {
+          border: none;
+          border-bottom: 2px solid #00000029;
+          margin-top: 15px;
+          width: 100%;
+          font-size: 12px;
+        }
+
+        input[type="radio"] {
+          visibility: hidden;
+        }
+
+        .contact-radio {
+          display: flex;
+          flex-direction: row;
+          padding: 10px 0;
+          font-size: 10px;
+          font-weight: bold;
+        }
+
+        .radioC {
+          display: flex;
+          flex-direction: column;
+          width: 100px;
+          color: black;
+        }
+
+        label {
+          opacity: 0.5;
+        }
+
+        input[type="radio"]:checked + label {
+          opacity: 1;
+        }
+
+        .radio {
+          display: inline-block;
+          position: relative;
+          width: 12px;
+          height: 12px;
+          border: 2px solid #41D395;
+          border-radius: 50%;
+        }
+
+        .radio:before {
+          position: absolute;
+          content: "";
+          top: 4px;
+          left: 4px;
+          width: 5px;
+          height: 5px;
+          border-radius: 50%;
+          transform: scale(0);
+          transition: 0.3s;
+        }
+
+        input[type="radio"]:checked + label .radio:before {
+          background: #41D395;
+          align-items: center;
+          transform: scale(1);
+        }
+
+        .send-contact {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .sendC {
+          border-radius: 4px;
+          background-color: #41D395;
+          border: none;
+          color: #FFFFFF;
+          text-align: center;
+          font-size: 18px;
+          padding: 0 20px;
+          width: 30vh;
+          height: 7vh;
+          transition: all 0.5s;
+          cursor: pointer;
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+
+  .footer {
+    height: 124px;
+
+    .left {
+      width: 60%;
+      align-items: center;
+    }
+
+    .right {
+      width: 40%;
+      align-items: center;
+
+      .title {
+        font: normal normal normal 18px/14px Montserrat;
+        letter-spacing: 0;
+        color: #FFFFFF;
+        opacity: 0.5;
+      }
+    }
+  }
 }
 
 div {
-  .social-media {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    flex-direction: row;
+  &.social-media {
 
-    .media {
-      margin-top: 20px;
-    }
-
-    .social {
+    .nav-social {
       display: flex;
       flex-direction: row;
-    }
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: nowrap;
 
-      .icon {
-      margin: 0 20px;
+      .media {
+        margin-top: 20px;
       }
-  }
-}
 
-div {
-  .transitioning-effect {
-    background-image: url(https://public-v2links.adobecc.com/71297cf3-7ddc-40af-70c4-ce8fda78a719/component?params=component_id%3A9acae50d-75e5-431e-bfc6-ff7738e64b76&params=version%3A0&token=1631696459_da39a3ee_afa0d547c394b2cec874a26c3f2cde35c56e819c&api_key=CometServer1);
-    height: 100vh;
-    background-size: cover;
-  }
-}
+      .social {
+        display: flex;
+        flex-direction: row;
+      }
 
-
-div {
-  .company {
-    background-color: black;
-    height: 100vh;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    color: white;
-  }
-
-  .company-logo {
-  }
-
-  .company-croak {
-    border-bottom: 2px solid #E27866;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    width: 30vh;
-  }
-
-  .company-block {
-    display: flex;
-    flex-direction: column;
-    margin-top: 30px;
-  }
-
-  .dots1, .dots2 {
-    width: 50px;
-    height: 50px;
-    background: #E27866;
-    border-radius: 100px;
-  }
-}
-
-div {
-  .awesome {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: white;
-    height: 100vh;
-  }
-
-  .awesome-textf {
-    font-size: 40px;
-    font-weight: bold;
-    color: black;
-  }
-
-  .awesome-croak {
-    border-bottom: 2px solid #E27866;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    width: 20vh;
-    align-items: center;
-  }
-
-    .awesome-texts {
-      font-size: 20px;
-      color: #86878B;
+      .icon1 {
+        background-color: red;
+        color: yellow;
+        height: 10px;
+        width: 20px;
+      }
     }
   }
 }

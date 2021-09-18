@@ -1,1 +1,1 @@
- alert("Veikia");
+ //alert("Veikia");
