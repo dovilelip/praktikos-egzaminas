@@ -289,13 +289,187 @@ div {
     }
   }
 
+
+  //County dalis
+  .county {
+    .container {
+      align-items: center;
+      text-align: left;
+      height: inherit;
+      color: #FFFFFF;
+
+      .left {
+        width: 100%;
+        align-items: center;
+        margin-bottom: 50px;
+      }
+
+      .right {
+        display: flex;
+        width: auto;
+
+        h1 {
+          text-align: left;
+          font: normal normal 600 30px/43px Montserrat;
+          letter-spacing: 0px;
+          color: #FFFFFF;
+          opacity: 1;
+        }
+
+        .county-line {
+          width: 250px;
+          height: 2px;
+          background-color: #E27866;
+          opacity: 1;
+          margin:20px 0;
+        }
+
+        .county-text {
+          text-align: left;
+          font: normal normal normal 14px/20px Montserrat;
+          letter-spacing: 0px;
+          color: #FFFFFF;
+          opacity: 1;
+        }
+
+        .county-design {
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-start;
+          align-items: flex-start;
+          align-content: stretch;
+          margin-bottom: 10px;
+          font: normal normal normal 14px/20px Montserrat;
+          letter-spacing: 0px;
+          opacity: 1;
+
+          .eye, .message {
+            margin: 12px;
+            width: 40px;
+            height: 40px;
+            border-radius: 100px;
+            background-color: #E27866;
+            border-radius: 1px solid #E27866;
+
+            .county1 {
+              text-align: center;
+              font: normal normal 600 14px/17px Montserrat;
+              letter-spacing: 0px;
+              color: #FFFFFF;
+              opacity: 1;
+            }
+
+            .county2 {
+              text-align: left;
+              font: normal normal normal 14px/20px Montserrat;
+              letter-spacing: 0px;
+              color: #FFFFFF;
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  //Options dalis
+  .options {
+    .container {
+      align-items: center;
+      text-align: center;
+      height: inherit;
+
+      .top {
+        height: 20%;
+        align-items: center;
+
+        h1 {
+          font-weight: bold;
+          color: #212121;
+        }
+
+        .options-line {
+          width: 64px;
+          height: 2px;
+          background-color: #E27866;
+          opacity: 1;
+        }
+
+        .options-text {
+          font: normal normal normal 14px/20px Montserrat;
+          letter-spacing: 0px;
+          color: #86878B;
+          opacity: 1;
+        }
+      }
+
+      .bottom {
+        height: auto;
+        border-radius: 5px;
+        margin-top: 20px;
+
+        .options-about {
+          display: flex;
+          flex-direction: row;
+          align-items: flex-start;
+          margin: 0 20px;
+          width: 960px;
+          height: 194px;
+
+          .about {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 286px;
+            height: 194px;
+            margin: 20px;
+
+              .design {
+                height: 50px;
+                width: 50px;
+                border-radius: 100px;
+                border: 1px solid #E27866;
+                margin-bottom: 20px;
+                font: normal normal normal 14px/20px Montserrat;
+                letter-spacing: 0px;
+                color: #86878B;
+                opacity: 1;
+
+                .certificate, .lotus, .visa {
+                  margin-top: 12px;
+                  width: 25px;
+                  height: 25px;
+                }
+              }
+
+              .design1 {
+                font: normal normal normal 20px/24px Montserrat;
+                letter-spacing: 0px;
+                color: #333333;
+                opacity: 1;
+              }
+
+              .design2 {
+                font: normal normal normal 14px/20px Montserrat;
+                letter-spacing: 0px;
+                color: #86878B;
+                opacity: 1;
+              }
+            }
+          }
+        }
+      }
+    }
+
+  //Pricing dalis
   .pricing {
     .container {
       align-items: center;
       height: inherit;
+      color: #FFFFFF;
 
       .top {
-        height: 30%;
+        height: 20%;
         align-items: center;
 
         h1 {
@@ -312,6 +486,79 @@ div {
 
       .bottom {
         height: auto;
+        border-radius: 5px;
+        margin-top: 20px;
+
+        .pricing-plan {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-content: flex-end;
+          align-items: center;
+          background-color: white;
+          border-radius: 5px;
+          margin: 0 20px;
+          width: 343px;
+
+          .about-plan {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #333333;
+            width: 100%;
+            border-radius: 5px 5px 0 0;
+            color: #FFFFFF;
+
+            .plan-name {
+              font: normal normal normal 20px/24px Montserrat;
+              letter-spacing: 0px;
+              color: #FFFFFF;
+              opacity: 1;
+              margin-top: 10px;
+            }
+
+            .price {
+              font: normal normal normal 94px/24px Montserrat;
+              letter-spacing: 0px;
+              color: #FFFFFF;
+              opacity: 1;
+              margin: 40px;
+            }
+
+            .payment {
+              font: normal normal normal 14px/24px Montserrat;
+              letter-spacing: 0px;
+              color: #FFFFFF;
+              opacity: 0.5;
+            }
+          }
+
+          .popular {
+            border-bottom: 2px solid #41D395;
+            background-color: #41D395;
+            width: 100%;
+            text-align: center;
+            font: normal normal normal 14px/24px Montserrat;
+            letter-spacing: 0px;
+            color: #FFFFFF;
+            opacity: 1;
+          }
+
+          ul {
+            padding-left: 0rem;
+            margin: 10px;
+
+            li {
+              text-align: center;
+              font: normal normal normal 14px/24px Montserrat;
+              letter-spacing: 0px;
+              color: #86878B;
+              opacity: 1;
+              list-style: none;
+              margin-top: 5px;
+            }
+          }
+        }
       }
     }
   }
@@ -325,6 +572,7 @@ div {
       h1 {
         margin-bottom: 50px;
         font-weight: bold;
+        color: #212121;
       }
 
       .reviews-line {
