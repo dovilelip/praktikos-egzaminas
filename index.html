@@ -19,12 +19,12 @@
       // created by dovile
       function cubeClick(event) {
         const selectedCube = event.target;
-        const children = selectedCube.parentElement.getElementsByTagName("div");
+        const children = selectedCube.parentElement.children;
         const panels = document.querySelectorAll(".panels > .panel");
 
         // prabegam pro cube vaikus ir istrinam zimejimus
         for (let child of children) {
-          child.classList.remove = "selected";
+          child.classList.remove("selected");
         }
         // prabegam pro panels vaikus ir istrinam flex'a bloko paslepimui (nes css nurodyta display: none)
         for (let panel of panels) {
@@ -49,7 +49,7 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav ml-auto">
+            <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
                     <a class="nav-link" href="#">Features</a>
                 </li>
@@ -83,7 +83,7 @@
                             <h1><b>Explained propriety of out perpetual to you</b></h1>
                         </div>
                         <div>
-                            <img class="download-line" src="app/img/nav-logo.png" alt="nav-logo">
+                            <img class="download-line" src="app/img/download-line.png" alt="nav-logo">
                         </div>
                         <div>
                             <h6><b>Insipidity the sufficient discretion imprudence resolution sir him decisively.
@@ -136,10 +136,8 @@
                                         </label>
                                     </div>
                                 </div>
-                                <div class="started-container">
-                                    <button class="block">GET STARTED</button>
-                                </div>
                             </div>
+                            <button class="block">GET STARTED</button>
                         </div>
                     </div>
                 </div>
@@ -157,39 +155,34 @@
                 <img class="social-icon" src="app/img/instagram.png" alt="instagram">
                 <img class="social-icon" src="app/img/twitter.png" alt="twitter">
                 <img class="social-icon" src="app/img/pinterest.png" alt="pinterest">
-                <img class="social-icon" src="app/img/rss.png" alt="rss">
+                <img class="social-icon1" src="app/img/rss.png" alt="rss" filter="invert(59%) sepia(21%) saturate(1195%) hue-rotate(320deg) brightness(92%) contrast(93%)">
             </div>
         </div>
     </div>
     <div class="tabs">
         <div class="container d-flex justify-content-around" style="height: inherit;">
             <div class="left d-flex flex-column justify-content-center justify-content-evenly">
-                <div id="one" class="cube selected" onclick="cubeClick(event)"></div>
-                <div id="two" class="cube" onclick="cubeClick(event)"></div>
-                <div id="three" class="cube" onclick="cubeClick(event)"></div>
+                <div id="one" class="cube selected" onclick="cubeClick(event)">REGISTER</div>
+                <div id="two" class="cube" onclick="cubeClick(event)">APPLY</div>
+                <div id="three" class="cube" onclick="cubeClick(event)">RECEIVE</div>
             </div>
             <div class="panels center">
                 <div id="cube-one-text" class="panel flex-column align-items-start justify-content-center justify-content-evenly d-flex">
-                    <span class="title">Tabs One title</span>
-                    <span class="tab-text1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes.</span>
-                    <span class="tab-text2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.</span>
+                    <span class="title">Tabs with soft transitiong effect. Explained propriety of out his you.</span>
                 </div>
                 <div id="cube-two-text" class="panel flex-column align-items-start justify-content-center justify-content-evenly">
-                    <span class="title">Tabs Two title</span>
-                    <span class="tab-text1">Abrakadabra</span>
+                    <span class="title">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes.</span>
                 </div>
                 <div id="cube-three-text" class="panel flex-column align-items-start justify-content-center justify-content-evenly">
-                    <span class="title">Tabs Three Title</span>
-                    <span class="tab-text1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes.
-                      <br/><br/>
-                       Kitoks tekstas
-                    </span>
+                    <span class="title">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.</span>
                 </div>
             </div>
-            <div class="right d-flex flex-column flex-wrap justify-content-center justify-content-evenly">
-              <div class="cube selected"></div>
-              <div class="cube"></div>
-              <div class="cube"></div>
+            <div class="right">
+                <div class="images d-flex flex-wrap justify-content-center">
+                    <img class="pic-tab" src="app/img/pic-tab1.png" alt="pic-tab1">
+                    <img class="pic-tab" src="app/img/pic-tab2.png" alt="pic-tab2">
+                    <img class="pic-tab" src="app/img/pic-tab3.png" alt="pic-tab3">
+                </div>
             </div>
         </div>
     </div>
@@ -260,7 +253,7 @@
         </div>
     </div>
     <div class="pricing">
-        <div class="container d-flex flex-column justify-content-center">
+        <div class="container d-flex flex-column justify-content-center flex-wrap">
             <div class="top d-flex flex-column justify-content-center justify-content-around">
                 <h1>PRICING OPTIONS</h1>
                 <div class="pricing-line"></div>
@@ -403,7 +396,7 @@
                 <img class="social-icon" src="app/img/instagram.png" alt="instagram">
                 <img class="social-icon" src="app/img/twitter.png" alt="twitter">
                 <img class="social-icon" src="app/img/pinterest.png" alt="pinterest">
-                <img class="social-icon" src="app/img/rss.png" alt="rss">
+                <img class="social-icon1" src="app/img/rss.png" alt="rss">
             </div>
             <div class="right d-flex flex-column justify-content-center justify-content-evenly">
                 <span class="title">© 2019 Cheshire County</span>
