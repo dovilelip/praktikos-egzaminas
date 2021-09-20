@@ -277,6 +277,12 @@ div {
           background-color: #E27866;
           opacity: (1);
         }
+
+        .text {
+          padding-top: 30%;
+          padding-right: 30%;
+          transform: rotate(-45deg);
+        }
       }
     }
 
@@ -322,14 +328,14 @@ div {
             background-color: #E27866;
           }
 
-        .picture2 {
-          width: 400px;
-          height: 200px;
+          .picture2 {
+            width: 400px;
+            height: 200px;
+          }
         }
       }
     }
   }
-}
 
   //County dalis
   .county {
@@ -700,7 +706,6 @@ div {
       }
     }
   }
-
 
   //Contact dalis
   .contact {
