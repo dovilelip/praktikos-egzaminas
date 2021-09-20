@@ -15,12 +15,34 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
     <title>Praktikos egzaminas</title>
+    <script>
+      // created by dovile
+      function cubeClick(event) {
+        const selectedCube = event.target;
+        const children = selectedCube.parentElement.getElementsByTagName("div");
+        const panels = document.querySelectorAll(".panels > .panel");
+
+        // prabegam pro cube vaikus ir istrinam zimejimus
+        for (let child of children) {
+          child.classList.remove = "selected";
+        }
+        // prabegam pro panels vaikus ir istrinam flex'a bloko paslepimui (nes css nurodyta display: none)
+        for (let panel of panels) {
+          panel.classList.remove("d-flex");
+        }
+
+        // nurodom cube bloka kaip pazimeta
+        selectedCube.classList.add("selected");
+        // rodom turini pagal pasirinkta cubika
+        const panel = document.getElementById("cube-" + selectedCube.id + "-text");
+        panel.classList.add("d-flex");
+      }
+    </script>
 <body>
 <header>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark justify-content-between">
         <a class="navbar-brand" href="#">
-            <img class="logo1"
-                 src="h-f22b52459d48&params=version%3A0&token=1631544985_da39a3ee_dae1dd81f8d109dcbb966e6f6f550fe3f0bfaed2&api_key=CometServer1">
+            <img class="nav-logo" src="app/img/nav-logo.png" alt="nav-logo">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
                 aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -55,14 +77,13 @@
                 <div class="content">
                     <div class="download">
                         <div class="download-logo2">
-                            <img class="logo2"
-                                 src="https://public-v2links.adobecc.com/71297cf3-7ddc-40af-70c4-ce8fda78a719/component?params=component_id%3A6552f95c-938f-49d1-92d5-a44f1d5654d1&params=version%3A0&token=1631544985_da39a3ee_dae1dd81f8d109dcbb966e6f6f550fe3f0bfaed2&api_key=CometServer1">
+                            <img class="logo2" src="app/img/logo2.png" alt="logo2">
                         </div>
                         <div>
                             <h1><b>Explained propriety of out perpetual to you</b></h1>
                         </div>
                         <div>
-                            <img src="https://public-v2links.adobecc.com/71297cf3-7ddc-40af-70c4-ce8fda78a719/component?params=component_id%3A90e7a925-17b4-4e7f-b26d-f178759b439e&params=version%3A0&token=1631544985_da39a3ee_dae1dd81f8d109dcbb966e6f6f550fe3f0bfaed2&api_key=CometServer1">
+                            <img class="download-line" src="app/img/nav-logo.png" alt="nav-logo">
                         </div>
                         <div>
                             <h6><b>Insipidity the sufficient discretion imprudence resolution sir him decisively.
@@ -143,47 +164,65 @@
     <div class="tabs">
         <div class="container d-flex justify-content-around" style="height: inherit;">
             <div class="left d-flex flex-column justify-content-center justify-content-evenly">
-                <div class="cube selected"></div>
-                <div class="cube"></div>
-                <div class="cube"></div>
+                <div id="one" class="cube selected" onclick="cubeClick(event)"></div>
+                <div id="two" class="cube" onclick="cubeClick(event)"></div>
+                <div id="three" class="cube" onclick="cubeClick(event)"></div>
             </div>
-            <div class="center d-flex flex-column justify-content-center justify-content-evenly">
-                <span class="title">Tabs with soft transitioning effect. Explained propriety of out perpetual his you.</span>
-                <span class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.</span>
+            <div class="panels center">
+                <div id="cube-one-text" class="panel flex-column align-items-start justify-content-center justify-content-evenly d-flex">
+                    <span class="title">Tabs One title</span>
+                    <span class="tab-text1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes.</span>
+                    <span class="tab-text2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.</span>
+                </div>
+                <div id="cube-two-text" class="panel flex-column align-items-start justify-content-center justify-content-evenly">
+                    <span class="title">Tabs Two title</span>
+                    <span class="tab-text1">Abrakadabra</span>
+                </div>
+                <div id="cube-three-text" class="panel flex-column align-items-start justify-content-center justify-content-evenly">
+                    <span class="title">Tabs Three Title</span>
+                    <span class="tab-text1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes.
+                      <br/><br/>
+                       Kitoks tekstas
+                    </span>
+                </div>
             </div>
             <div class="right d-flex flex-column flex-wrap justify-content-center justify-content-evenly">
+              <div class="cube selected"></div>
+              <div class="cube"></div>
+              <div class="cube"></div>
             </div>
         </div>
     </div>
     <div class="county">
         <div class="container d-flex justify-content-center justify-content-evenly">
-          <div class="left d-flex flex-column justify-content-left justify-content-around">
-            <img class="county-img" src="app/img/county.png" alt="county-img">
-          </div>
-          <div class="right">
-              <div class="container d-flex justify-content-right justify-content-evenly">
-                  <div class="county-about">
-                    <h1>Erat tempor tempus erat malesuada</h1>
-                    <div class="county-line"></div>
-                    <p class="county-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.</p>
-                    <div class="county-design">
-                      <img class="eye" src="app/img/eye.png" alt="eye">
-                      <div class="county-text1">
-                      <p class="county1"><b>Title</b></p>
-                      <p class="county2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aenean euismod ibendum laoreet.</p>
-                    </div>
-                  </div>
-                  <div class="county-design">
-                    <img class="message" src="app/img/message.png" alt="message">
-                    <div class"county-text1">
-                    <p class="county1"><b>Title</b></p>
-                    <p class="county2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.</p>
+            <div class="left d-flex flex-column justify-content-left justify-content-around">
+                <img class="county-img" src="app/img/county.png" alt="county-img">
+            </div>
+            <div class="right">
+                <div class="container d-flex justify-content-right justify-content-evenly">
+                    <div class="county-about">
+                        <h1>Erat tempor tempus erat malesuada</h1>
+                        <div class="county-line"></div>
+                        <p class="county-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.</p>
+                        <div class="county-design">
+                            <img class="eye" src="app/img/eye.png" alt="eye">
+                            <div class="county-text1">
+                              <p class="county1"><b>Title</b></p>
+                              <p class="county2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aenean euismod ibendum laoreet.</p>
+                            </div>
+                        </div>
+                        <div class="county-design">
+                            <img class="message" src="app/img/message.png" alt="message">
+                            <div class"county-text1">
+                                <p class="county1"><b>Title</b></p>
+                                <p class="county2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-              </div>
-          </div>
+            </div>
         </div>
-      </div>
+    </div>
     <div class="options">
         <div class="container d-flex flex-column justify-content-center">
           <div class="top d-flex flex-column justify-content-center justify-content-around">
